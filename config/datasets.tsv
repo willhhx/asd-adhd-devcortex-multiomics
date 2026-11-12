@@ -1,0 +1,7 @@
+dataset	accession	samples	donors	cells	modality	public	status
+Human fetal+postnatal cortex multiome/scATAC (Trevino 2021 Cell)	GSE162170	TO_VERIFY	TO_VERIFY	TO_VERIFY	scATAC+scRNA (10x multiome) and scATAC	yes (GEO)	TO_VERIFY at download
+Human fetal cortex multiome atlas (Wang 2025)	TO_FILL	TO_VERIFY	TO_VERIFY	TO_VERIFY	scATAC+scRNA	TO_VERIFY	accession not confirmed
+ASD GWAS (Grove 2019, iPSYCH-PGC)	PGC download	NA	NA	18381 cases / 27969 controls	GWAS summary stats	yes	verify file
+ADHD GWAS (Demontis 2023)	PGC download	NA	NA	38691 cases / 186843 controls	GWAS summary stats	yes	verify file
+SCZ GWAS PGC3 (positive control)	PGC download	NA	NA	~76k cases / ~244k controls	GWAS summary stats	yes	verify file
+1000G Phase3 LD reference + baselineLD v2.2	Broad alkesgroup/LDSCORE	NA	NA	NA	LD reference	yes	scripts/00

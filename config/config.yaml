@@ -1,0 +1,29 @@
+# Real-data config (Wang 2025 atlas). Keys match synthetic/config_synthetic.yaml.
+seed: 2026
+atlas:
+  name: wang2025_snMultiome          # 38 samples / 27 donors; built by scripts/03b_build_wang_atlas.py
+  cell_type_col: cell_type           # = Type_updated (34 types)
+  stage_col: stage                   # = Group
+  donor_col: donor
+  sample_col: sample
+  stage_order: [First_trimester, Second_trimester, Third_trimester, Infancy, Adolescence]
+  min_nuclei_per_state: 300
+  min_donors_per_state: 3
+  nuclei_per_state: 300
+peaksets:
+  method: log2fc
+  top_n: 20000
+  min_cpm: 1.0
+traits:
+  ASD:    {role: target,           n_cases: 18381, n_controls: 27969}
+  ADHD:   {role: target,           n_cases: 38691, n_controls: 186843}
+  SCZ:    {role: positive_control, n_cases: 53386, n_controls: 77258}
+  HEIGHT: {role: negative_control}   # any non-brain trait; replace by e.g. a non-neuro GWAS
+contrasts:
+  - [ASD, ADHD]
+finemap:
+  p_threshold: 5.0e-8
+  window: 500000
+  credible_level: 0.95
+  enrichment_cap: 10.0
+  fdr_for_prior: 0.05

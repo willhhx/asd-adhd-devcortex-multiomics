@@ -1,0 +1,9 @@
+docs/
+data/raw/
+data/munged*/
+work/
+manuscript*
+*.docx
+*.tex
+*_preview.pdf
+.DS_Store

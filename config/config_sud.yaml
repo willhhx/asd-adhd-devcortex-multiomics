@@ -1,0 +1,26 @@
+# Factor analysis, pooled class x stage-group annotations (analysis plan v3).
+seed: 2026
+atlas:
+  name: wang2025_snMultiome          # 38 samples / 27 donors; built by scripts/03b_build_wang_atlas.py
+  cell_type_col: cell_type           # = Type_updated (34 types)
+  stage_col: stage                   # = Group
+  donor_col: donor
+  sample_col: sample
+  stage_order: [Early_fetal, Mid_late_fetal, Postnatal]
+  min_nuclei_per_state: 300
+  min_donors_per_state: 3
+  nuclei_per_state: 300
+peaksets:
+  method: log2fc
+  top_n: 20000
+  min_cpm: 1.0
+traits:
+  CUD: {role: target, n_cases: 16017, n_controls: 352533}   # PGC cannabis use disorder, EUR
+  ALC: {role: target, n_eff: 25554}                          # PGC alcohol dependence, EUR (median Weight)
+contrasts: []
+finemap:
+  p_threshold: 5.0e-8
+  window: 500000
+  credible_level: 0.95
+  enrichment_cap: 10.0
+  fdr_for_prior: 0.05
